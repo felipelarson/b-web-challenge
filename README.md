@@ -1,26 +1,70 @@
-# b-web-challenge
+# Getting Started with Create React App
 
-**The main objective of this challenge is to see how familiar you are with web technologies,
-for that you are going to build a Tic Tac Toe Game.**
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![Image of TicTacToe](https://img.poki.com/cdn-cgi/image/quality=78,width=314,height=314,fit=cover,g=0.5x0.5,f=auto/85535e05d1f130b16751c8308cfbb19b.png)
+## Available Scripts
 
-## Notes
-There is no cross browser compatibility requirements, you can use all the new features available
+In the project directory, you can run:
 
-## Functionality
-What we expect the game to do
-* have a different symbol for each player (feel free to use any symbol/letter)
-* have a reset button (it will force the game into the initial state)
-* recognize when someone wins the game and throw an alert with his name or symbol
-* recognize when the game ends in a draw and throw an alert with that information
-* automatically reset the board 10 seconds after the game ends on either condition (winning, draw)
+### `npm start`
 
-## Bonus points:
-* we do not ask for a specific design, but please, make it a bit pretty
-* using correct html markup
-* avoiding style duplications
-* only access the Dom when you really need to
-* change the background color when the screen size is smaller (mobile size) :hint(media queries)
-* implement a better way to display the winner/draw than a simple alert (there is no limits here, use your imagination)
-* implement a visible countdown for the reset timer (after a game ends)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
