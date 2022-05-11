@@ -1,0 +1,10 @@
+.title {
+  color: var(--white);
+  font-size: 6.25rem;
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.title > span {
+  color: var(--secondary);
+}
