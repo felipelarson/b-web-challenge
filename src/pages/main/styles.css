@@ -1,8 +1,21 @@
 .main {
   width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background: var(--primary);
+}
+
+.board-main {
+  width: 100%;
+  height: calc(100% - 11.25rem);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-main {
+}
+
+.btn-main > button {
+  margin: 1rem;
 }
