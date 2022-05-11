@@ -1,0 +1,20 @@
+.square {
+  border: none;
+  background: var(--white);
+  width: 100px;
+  height: 100px;
+  color: var(--secondary);
+  box-shadow: 0 4px 4px var(--shadow);
+  border-radius: 8px;
+  font-size: 72px;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-out;
+}
+
+.square:hover {
+  background: var(--secondary);
+  color: var(--white);
+  box-shadow: none;
+  transition: box-shadow 200ms ease-out;
+  transform: translate(0, 4px);
+}
