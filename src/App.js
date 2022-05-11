@@ -1,7 +1,9 @@
-export function App() {
-  return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
-  );
-}
+import { Main } from "./pages/main";
+import "./styles/reset.css"
+import "./styles/colors.css"
+
+export const App = () => (
+  <>
+    <Main />
+  </>
+);
