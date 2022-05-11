@@ -1,0 +1,30 @@
+.home,
+.home .home-left,
+.home .home-left > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home {
+  background: var(--primary);
+  height: 100vh;
+}
+
+.home .home-left {
+  justify-content: space-evenly;
+  flex-direction: column;
+  height: 100%;
+}
+
+.home .home-left > div {
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.home .home-left > div > p {
+  font-size: 30px;
+  color: var(--white);
+  margin-top: 1rem;
+  font-family: var(--sarabun);
+}
