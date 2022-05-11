@@ -1,11 +1,20 @@
 import React from 'react'
 import { Board } from '../../components/Board'
+import { Button } from '../../components/Button'
+import { Title } from '../../components/Title'
 import "./styles.css"
 
 export const Main = () => {
   return (
     <div className='main'>
-      <Board />
+      <Title />
+      <div className='board-main'>
+        <Board />
+        <div className='btn-main'>
+          <Button color="secondary">Reiniciar</Button>
+          <Button color="light-primary">Voltar</Button>
+        </div>
+      </div>
     </div>
   )
 }
