@@ -11,8 +11,8 @@ export const Main = () => {
       <div className='board-main'>
         <Board />
         <div className='btn-main'>
-          <Button color="secondary">Reiniciar</Button>
-          <Button color="light-primary">Voltar</Button>
+          <Button path="/" color="secondary">Reiniciar</Button>
+          <Button path="/" color="light-primary">Voltar</Button>
         </div>
       </div>
     </div>
