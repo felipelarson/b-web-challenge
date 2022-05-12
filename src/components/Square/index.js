@@ -1,7 +1,7 @@
 import "./styles.css"
 
-export const Square = (props) => (
-  <button className="square" onClick={props.onClick}>
-    {props.value}
+export const Square = ({ value, callback }) => (
+  <button className="square" onClick={callback} disabled={value}>
+    {value}
   </button>
 )

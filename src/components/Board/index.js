@@ -6,7 +6,7 @@ import { asyncIncrementPlayerTwo } from "../../store/modules/playerTwo/thunk"
 import { Square } from "../Square"
 import "./styles.css"
 
-export const Board = () => {
+export const Board = ({ squarePositions }) => {
 
   const [isPlayerOne, setIsPlayerOne] = useState(true)
 
@@ -14,29 +14,27 @@ export const Board = () => {
   const playerOne = useSelector((state) => state.playerOne)
   const playerTwo = useSelector((state) => state.playerTwo)
 
-  const squarePositions = [...Array(9).keys()]
-
   const handleClickChangePlayer = (index) => {
     if (isPlayerOne) {
       dispatch(asyncIncrementPlayerOne(index))
+      squarePositions[index] = "X"
     } else {
       dispatch(asyncIncrementPlayerTwo(index))
+      squarePositions[index] = "O"
     }
     setIsPlayerOne(!isPlayerOne)
+
   }
 
   return (
     <div className="board">
 
-      {playerOne.playerOne} |
-      {playerTwo.playerTwo}
-
-      {squarePositions.map(index =>
+      {squarePositions.map((value, index) =>
       (
         <Square
           key={index}
-          value=""
-          onClick={() => handleClickChangePlayer(index)}
+          value={value}
+          callback={() => handleClickChangePlayer(index)}
         />
       )
       )}
