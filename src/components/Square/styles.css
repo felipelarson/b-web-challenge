@@ -18,3 +18,8 @@
   transition: box-shadow 200ms ease-out;
   transform: translate(0, 4px);
 }
+
+.square:disabled {
+  box-shadow: none;
+  transform: translate(0, 4px);
+}
