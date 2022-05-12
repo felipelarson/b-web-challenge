@@ -1,17 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const player = createSlice({
+const playerOne = createSlice({
   name: "playerOneSelections",
   initialState: {
-    player: []
+    playerOne: []
   },
   reducers: {
-    increment(state, action) {
-      state.player.push(action.payload)
+    incrementPlayerOne(state, action) {
+      state.playerOne.push(action.payload)
     }
   }
 })
 
-export const { increment } = player.actions
+export const { incrementPlayerOne } = playerOne.actions
 
-export default player.reducer
+export default playerOne.reducer

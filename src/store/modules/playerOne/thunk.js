@@ -1,7 +1,7 @@
-import { increment } from "./playerOne.store"
+import { incrementPlayerOne } from "./playerOne.store"
 
-export function asyncIncrement(position) {
+export function asyncIncrementPlayerOne(position) {
   return async function (dispatch) {
-    dispatch(increment(position))
+    dispatch(incrementPlayerOne(position))
   }
 }

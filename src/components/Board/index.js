@@ -1,25 +1,42 @@
+import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { asyncIncrement } from "../../store/modules/playerOne/thunk"
+import { asyncIncrementPlayerOne } from "../../store/modules/playerOne/thunk"
+import { asyncIncrementPlayerTwo } from "../../store/modules/playerTwo/thunk"
 
 import { Square } from "../Square"
 import "./styles.css"
 
 export const Board = () => {
 
+  const [isPlayerOne, setIsPlayerOne] = useState(true)
+
   const dispatch = useDispatch()
-  const position = useSelector((state) => state.playerOne)
+  const playerOne = useSelector((state) => state.playerOne)
+  const playerTwo = useSelector((state) => state.playerTwo)
 
   const squarePositions = [...Array(9).keys()]
 
+  const handleClickChangePlayer = (index) => {
+    if (isPlayerOne) {
+      dispatch(asyncIncrementPlayerOne(index))
+    } else {
+      dispatch(asyncIncrementPlayerTwo(index))
+    }
+    setIsPlayerOne(!isPlayerOne)
+  }
+
   return (
     <div className="board">
-      {position.player}
+
+      {playerOne.playerOne} |
+      {playerTwo.playerTwo}
+
       {squarePositions.map(index =>
       (
         <Square
           key={index}
           value=""
-          onClick={() => dispatch(asyncIncrement(index))}
+          onClick={() => handleClickChangePlayer(index)}
         />
       )
       )}
