@@ -24,3 +24,10 @@
   transition: box-shadow 200ms ease-out;
   transform: translate(0, 4px);
 }
+
+@media screen and (max-width: 425px) {
+  .btn {
+    width: 141px;
+    height: 52px;
+  }
+}
