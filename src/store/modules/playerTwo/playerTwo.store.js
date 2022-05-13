@@ -4,7 +4,7 @@ const playerTwo = createSlice({
   name: "playerTwoSelections",
   initialState: {
     position: [],
-    player: "Two"
+    player: "Jogador O"
   },
   reducers: {
     incrementPlayerTwo(state, action) {
