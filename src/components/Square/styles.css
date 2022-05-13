@@ -23,3 +23,11 @@
   box-shadow: none;
   transform: translate(0, 4px);
 }
+
+.square-winner {
+  background: var(--secondary);
+  color: var(--white);
+  box-shadow: none;
+  transition: box-shadow 200ms ease-out;
+  transform: translate(0, 4px);
+}

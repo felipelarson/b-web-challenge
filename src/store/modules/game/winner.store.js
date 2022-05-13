@@ -13,11 +13,14 @@ const winner = createSlice({
   reducers: {
     checkWinner(state, action) {
       const { position, player } = action.payload
-      const buttons = document.querySelectorAll(".square")
+      const [...buttons] = document.querySelectorAll(".square")
 
       state.value.map(([a, b, c]) => {
         if (position.includes(a) && position.includes(b) && position.includes(c)) {
-          [...buttons].map(btn => btn.disabled = true)
+          buttons.map(btn => btn.disabled = true)
+          buttons[a].classList.add("square-winner")
+          buttons[b].classList.add("square-winner")
+          buttons[c].classList.add("square-winner")
 
           return toast(`${player} é o vencedor!`)
         }
