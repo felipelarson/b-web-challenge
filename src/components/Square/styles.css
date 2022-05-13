@@ -22,6 +22,12 @@
 .square:disabled {
   box-shadow: none;
   transform: translate(0, 4px);
+  cursor: none;
+}
+
+.square:disabled:hover {
+  background: var(--white);
+  color: var(--secondary);
 }
 
 .square-winner {
