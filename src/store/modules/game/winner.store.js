@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const initialState = {
   value: [
@@ -15,10 +16,10 @@ const winner = createSlice({
 
       state.value.map(([a, b, c]) => {
         if (position.includes(a) && position.includes(b) && position.includes(c)) {
-          return player
+          return toast(`${player} é o vencedor!`)
         }
         if (position.length === 5) {
-          console.log("Empate")
+          toast("Empate")
         }
         return false
       })

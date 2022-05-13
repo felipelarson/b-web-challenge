@@ -17,7 +17,7 @@ export const Board = ({ squarePositions }) => {
   const checkWinner = useSelector((state) => state.checkWinner)
 
   const handleClickChangePlayer = (index) => {
-    if (isPlayerOne) {
+    if (!isPlayerOne) {
       dispatch(asyncIncrementPlayerOne(index))
       squarePositions[index] = "X"
     } else {
