@@ -24,11 +24,12 @@ const winner = createSlice({
 
           return toast(`${player} é o vencedor!`)
         }
-        if (position.length === 6) {
-          return toast("Empate")
-        }
         return false
       })
+
+      if (position.length === 5) {
+        return toast("Empate")
+      }
     }
 
   }
