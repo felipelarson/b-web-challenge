@@ -27,7 +27,7 @@ export const Board = ({ squarePositions }) => {
   }
 
   useEffect(() => {
-    if (isPlayerOne) {
+    if (!isPlayerOne) {
       dispatch(asyncCheckWinner(playerOne))
     } else {
       dispatch(asyncCheckWinner(playerTwo))
@@ -38,7 +38,6 @@ export const Board = ({ squarePositions }) => {
 
   return (
     <div className="board">
-      {!checkWinner && <p>Ganhou</p>}
       {squarePositions.map((value, index) =>
       (
         <Square
