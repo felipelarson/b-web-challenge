@@ -6,7 +6,7 @@ import "./styles.css"
 
 export const Main = () => {
 
-  const [squarePositions, setSquarePositions] = useState(["", "", "", "", "", "", "", "", "",])
+  const [squarePositions, setSquarePositions] = useState(Array(9).fill(""))
 
   return (
     <div className='main'>
@@ -14,7 +14,7 @@ export const Main = () => {
       <div className='board-main'>
         <Board squarePositions={squarePositions} />
         <div className='btn-main'>
-          <Button path="" color="secondary" onClick={() => setSquarePositions(["", "", "", "", "", "", "", "", "",])}>Reiniciar</Button>
+          <Button path="" color="secondary" onClick={() => setSquarePositions(Array(9).fill(""))}>Reiniciar</Button>
           <Button path="/" color="light-primary">Voltar</Button>
         </div>
       </div>

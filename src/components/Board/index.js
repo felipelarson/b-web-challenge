@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { asyncCheckWinner } from "../../store/modules/game/thunk"
 import { asyncIncrementPlayerOne } from "../../store/modules/playerOne/thunk"
@@ -26,13 +26,20 @@ export const Board = ({ squarePositions }) => {
       squarePositions[index] = "O"
     }
     setIsPlayerOne(!isPlayerOne)
-    dispatch(asyncCheckWinner(playerOne))
-    dispatch(asyncCheckWinner(playerTwo))
+
   }
+
+  useEffect(() => {
+    dispatch(asyncCheckWinner(playerOne.playerOne))
+  }, [handleClickChangePlayer])
+
+  // dispatch(asyncCheckWinner(playerTwo))
+  // checkWinner.value.map((item) => {
+  //   let match = 0;
+  // })
 
   return (
     <div className="board">
-      {!!checkWinner ?? ""}
       {squarePositions.map((value, index) =>
       (
         <Square
