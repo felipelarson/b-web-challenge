@@ -11,11 +11,16 @@ const winner = createSlice({
   initialState,
   reducers: {
     checkWinner(state, action) {
-      const playerOne = action.payload
+      const { position, player } = action.payload
+
       state.value.map(([a, b, c]) => {
-        if (playerOne.includes(a) && playerOne.includes(b) && playerOne.includes(c)) {
-          console.log("Ganhei Map")
+        if (position.includes(a) && position.includes(b) && position.includes(c)) {
+          return player
         }
+        if (position.length === 5) {
+          console.log("Empate")
+        }
+        return false
       })
     }
 

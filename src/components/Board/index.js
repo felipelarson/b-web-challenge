@@ -20,26 +20,25 @@ export const Board = ({ squarePositions }) => {
     if (isPlayerOne) {
       dispatch(asyncIncrementPlayerOne(index))
       squarePositions[index] = "X"
-
     } else {
       dispatch(asyncIncrementPlayerTwo(index))
       squarePositions[index] = "O"
     }
-    setIsPlayerOne(!isPlayerOne)
-
   }
 
   useEffect(() => {
-    dispatch(asyncCheckWinner(playerOne.playerOne))
-  }, [handleClickChangePlayer])
-
-  // dispatch(asyncCheckWinner(playerTwo))
-  // checkWinner.value.map((item) => {
-  //   let match = 0;
-  // })
+    if (isPlayerOne) {
+      dispatch(asyncCheckWinner(playerOne))
+    } else {
+      dispatch(asyncCheckWinner(playerTwo))
+    }
+    setIsPlayerOne(!isPlayerOne)
+    // eslint-disable-next-line
+  }, [playerOne, playerTwo])
 
   return (
     <div className="board">
+      {!checkWinner && <p>Ganhou</p>}
       {squarePositions.map((value, index) =>
       (
         <Square

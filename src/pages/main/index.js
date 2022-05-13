@@ -6,6 +6,7 @@ import "./styles.css"
 
 export const Main = () => {
 
+  // eslint-disable-next-line
   const [squarePositions, setSquarePositions] = useState(Array(9).fill(""))
 
   return (
@@ -14,7 +15,7 @@ export const Main = () => {
       <div className='board-main'>
         <Board squarePositions={squarePositions} />
         <div className='btn-main'>
-          <Button path="" color="secondary" onClick={() => setSquarePositions(Array(9).fill(""))}>Reiniciar</Button>
+          <Button path="" color="secondary" onClick={() => window.location.reload()}>Reiniciar</Button>
           <Button path="/" color="light-primary">Voltar</Button>
         </div>
       </div>
