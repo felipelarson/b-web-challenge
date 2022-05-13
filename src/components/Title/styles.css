@@ -8,3 +8,9 @@
 .title > span {
   color: var(--secondary);
 }
+
+@media screen and (max-width: 425px) {
+  .title {
+    padding-top: 2rem;
+  }
+}
