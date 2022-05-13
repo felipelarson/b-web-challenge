@@ -3,11 +3,12 @@ import { createSlice } from "@reduxjs/toolkit";
 const playerOne = createSlice({
   name: "playerOneSelections",
   initialState: {
-    playerOne: []
+    position: [],
+    player: "One"
   },
   reducers: {
     incrementPlayerOne(state, action) {
-      state.playerOne.push(action.payload)
+      state.position.push(action.payload)
     }
   }
 })
