@@ -14,7 +14,6 @@ export const Board = ({ squarePositions }) => {
   const dispatch = useDispatch()
   const playerOne = useSelector((state) => state.playerOne)
   const playerTwo = useSelector((state) => state.playerTwo)
-  const checkWinner = useSelector((state) => state.checkWinner)
 
   const handleClickChangePlayer = (index) => {
     if (!isPlayerOne) {
