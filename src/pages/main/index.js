@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Board } from '../../components/Board'
 import { Button } from '../../components/Button'
 import { Title } from '../../components/Title'
@@ -8,6 +9,14 @@ export const Main = () => {
 
   // eslint-disable-next-line
   const [squarePositions, setSquarePositions] = useState(Array(9).fill(""))
+  const playerOne = useSelector((state) => state.playerOne)
+  const playerTwo = useSelector((state) => state.playerTwo)
+
+  const handleClickToBack = () => {
+    setSquarePositions(Array(9).fill(""))
+    playerOne.position = []
+    playerTwo.position = []
+  }
 
   return (
     <div className='main'>
@@ -16,7 +25,7 @@ export const Main = () => {
         <Board squarePositions={squarePositions} />
         <div className='btn-main'>
           <Button path="" color="secondary" onClick={() => window.location.reload()}>Reiniciar</Button>
-          <Button path="/" color="light-primary">Voltar</Button>
+          <Button path="/" color="light-primary" onClick={handleClickToBack}>Voltar</Button>
         </div>
       </div>
     </div>
